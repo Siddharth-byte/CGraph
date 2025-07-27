@@ -13,11 +13,16 @@ Pie Chart
 
 This project is ideal for anyone who needs basic data visualization in C applications with real-time rendering and minimal setup.
 
-Features
+Features:
+
 1.Supports Scatter, Bar, Histogram, and Pie charts
+
 2.Custom Colors or automatic color assignment
+
 3.Titles & Axis Labels for better readability
+
 4.Lightweight and fast rendering using Raylib
+
 5.Simple API for integration into your C projects
 
 Tech Stack
