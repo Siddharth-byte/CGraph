@@ -64,23 +64,20 @@ gcc main.c -o main.exe -lraylib -lopengl32 -lgdi32 -lwinmm
 
 Example: A simple scatter plot
 // main.c
+
 #include <stdio.h>
 #include "Cgraph.h"
-
 int main() {
     float x_data[] = { 1.0, 2.0, 3.0, 4.0, 5.0 };
     float y_data[] = { 5.5, 4.2, 7.8, 6.3, 9.1 };
     int data_count = 5;
-
     // Call library functions
     ScatterPlot(x_data, y_data, data_count, "BLUE");
     Print_Title("Sample Scatter Plot");
     Print_Axis_title("X-Axis", 'x');
     Print_Axis_title("Y-Axis", 'y');
-
     //  Render to handle the window loop and drawing
     Render();
-
     return 0;} 
     
 Output:
