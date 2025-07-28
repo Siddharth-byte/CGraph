@@ -81,8 +81,8 @@ int main() {
     //  Render to handle the window loop and drawing
     Render();
 
-    return 0;
-} 
+    return 0;} 
+    
 Output:
 
 
