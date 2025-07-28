@@ -3,13 +3,13 @@ CGraph is a lightweight graph plotting library built in C using Raylib for rende
 Overview
 CGraph is a lightweight and simple-to-use graph plotting library written in C and powered by Raylib. It provides a clean API for visualizing data through common chart types:
 
-Scatter Plot
+Scatter Plot--void ScatterPlot(float[], float[], int, char[]);
 
-Bar Graph
+Bar Graph--void BarGraph(float[], float[], int, char[]);
 
-Histogram
+Histogram--void Histogram(const float* data, int count, int numBins, char color[]);
 
-Pie Chart
+Pie Chart--void PieChart(const char** labels, float* values, int count, Color* colors);
 
 This project is ideal for anyone who needs basic data visualization in C applications with real-time rendering and minimal setup.
 
@@ -60,4 +60,28 @@ Build and run.
 
 For MinGW (Windows):
 bash 
-gcc main.c -o main.exe -lraylib -lopengl32 -lgdi32 -lwinmm
+gcc main.c -o main.exe -lraylib -lopengl32 -lgdi32 -lwinmm    
+
+Example: A simple scatter plot
+// main.c
+#include <stdio.h>
+#include "Cgraph.h"
+
+int main() {
+    float x_data[] = { 1.0, 2.0, 3.0, 4.0, 5.0 };
+    float y_data[] = { 5.5, 4.2, 7.8, 6.3, 9.1 };
+    int data_count = 5;
+
+    // Call library functions
+    ScatterPlot(x_data, y_data, data_count, "BLUE");
+    Print_Title("Sample Scatter Plot");
+    Print_Axis_title("X-Axis", 'x');
+    Print_Axis_title("Y-Axis", 'y');
+
+    //  Render to handle the window loop and drawing
+    Render();
+
+    return 0;
+} 
+Output:
+![Scatter](https://github.com/user-attachments/assets/6a352cd6-201b-407f-90b8-75b3af0914d9)
