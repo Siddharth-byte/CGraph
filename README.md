@@ -84,4 +84,6 @@ int main() {
     return 0;
 } 
 Output:
+
+
 ![Scatter](https://github.com/user-attachments/assets/6a352cd6-201b-407f-90b8-75b3af0914d9)
